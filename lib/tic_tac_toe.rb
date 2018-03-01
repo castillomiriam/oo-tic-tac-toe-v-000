@@ -77,7 +77,7 @@ def current_player
   end
 
   def full?
-  board.all? do |position|
+  @board.all? do |position|
   position == "X" || position == "O"
   end
   end
@@ -90,25 +90,7 @@ def current_player
   won? || draw? || full?
   end
 
-  def winner(board)
-  if winning_array = won?(board)
-  winning_index = winning_array[0]
-  winner = board[winning_index]
-end
-end
-
-
-
-
-def draw?(board)
-  full?(board) && !won?(board)
-  end
-
-  def over?(board)
-  won?(board) || draw?(board) || full?(board)
-  end
-
-  def winner(board)
+  def winner
   if winning_array = won?(board)
   winning_index = winning_array[0]
   winner = board[winning_index]
