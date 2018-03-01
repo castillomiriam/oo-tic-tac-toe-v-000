@@ -91,9 +91,9 @@ def current_player
   end
 
   def winner
-  if winning_array = won?(board)
+  if winning_array = won?
   winning_index = winning_array[0]
-  winner = board[winning_index]
+  winner = @board[winning_index]
 end
 end
 
