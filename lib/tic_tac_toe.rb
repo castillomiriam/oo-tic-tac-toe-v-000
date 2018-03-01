@@ -54,7 +54,7 @@ def turn_count
     @board.count{|token| token == "X" || token == "O"}
   end
 
-def current_player(board)
+def current_player
     turn_count.even? ? "X" : "O"
   end
 
