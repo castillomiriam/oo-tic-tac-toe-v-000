@@ -97,15 +97,15 @@ def current_player
 end
 end
 
-def play(board)
-until over?(board)
-  turn(board)
+def play
+until over?
+  turn
 end
- if winner(board) == "X"
+ if winner == "X"
   puts "Congratulations X!"
-elsif winner(board) == "O"
+elsif winner == "O"
   puts "Congratulations O!"
-  elsif draw?(board)
+  elsif draw?
   puts "Cat's Game!"
 end
 end
